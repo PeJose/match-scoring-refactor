@@ -1,0 +1,22 @@
+{
+  "name": "task_sports_scoring",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "tsx --watch index.ts",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@types/node": "^25.1.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "dependencies": {
+    "tsx": "^4.21.0",
+    "zod": "^4.3.6"
+  }
+}
