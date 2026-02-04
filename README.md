@@ -9,13 +9,13 @@ A refactored version of the match scoring application, migrated from legacy Java
 - **Unit Tests**: Comprehensive testing using `Vitest`.
 
 ## Project Structure
-
-- `src/processors`: Utility functions to process the data.
-- `src/strategy`: Contains parsing logic for different sports.
-- `src/services`: Business logic (MatchService) to process collections of matches.
-- `src/types`: TypeScript definitions and Enums.
-- `src/errors` : Error definitions
-- `tests`: Unit tests.
+- `legacy`: Provided legacy code.
+- `refactor/src/processors`: Utility functions to process the data.
+- `refactor/src/strategy`: Contains parsing logic for different sports.
+- `refactor/src/services`: Business logic (MatchService) to process collections of matches.
+- `refactor/src/types`: TypeScript definitions and Enums.
+- `refactor/src/errors` : Error definitions
+- `refactor/tests`: Unit tests.
 
 ## Getting Started
 
@@ -23,6 +23,7 @@ A refactored version of the match scoring application, migrated from legacy Java
 
 - Node.js (v16 or higher recommended) - version requirement is only for good devx, after building code works even on node v6 (tested).
 - npm
+- running the following scripts inside the `/refactor` folder :-)
 
 ### Installation
 
