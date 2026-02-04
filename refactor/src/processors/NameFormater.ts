@@ -1,11 +1,11 @@
-import { Match } from "../types";
+import { MatchDTO } from "../types/match";
 
 const NameFormater = {
-	getVsName(match: Match) {
+	getVsName(match: MatchDTO) {
 		return `${match.participant1} vs ${match.participant2}`;
 	},
 
-	getDashName(match: Match) {
+	getDashName(match: MatchDTO) {
 		return `${match.participant1} - ${match.participant2}`;
 	},
 };

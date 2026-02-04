@@ -1,7 +1,7 @@
 import NameFormater from "../processors/NameFormater";
-import { SPORTS } from "../types/schemas";
 import ScoreFormatter from "../processors/ScoreFormater";
-import { FormatName, FormatScore } from "../types";
+import { SPORTS } from "../types/match";
+import { FormatName, FormatScore } from "../types/match";
 
 const MatchParsers: Record<
 	SPORTS,
@@ -16,16 +16,16 @@ const MatchParsers: Record<
 		formatScore: ScoreFormatter.formatSetScore,
 	},
 	volleyball: {
-		formatName: NameFormater.getVsName,
+		formatName: NameFormater.getDashName,
 		formatScore: ScoreFormatter.formatSetScore,
 	},
 	handball: {
-		formatName: NameFormater.getDashName,
+		formatName: NameFormater.getVsName,
 		formatScore: ScoreFormatter.formatPlainScore,
 	},
 	basketball: {
 		formatName: NameFormater.getDashName,
-		formatScore: ScoreFormatter.formatMultiArrayScore,
+		formatScore: ScoreFormatter.formatMatrixScore,
 	},
 };
 

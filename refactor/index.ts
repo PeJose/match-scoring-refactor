@@ -1,5 +1,4 @@
-import MatchParsers from "./src/strategy/MatchParsers";
-import { MappedMatch, MatchSchema } from "./src/types";
+import MatchService from "./src/services/MatchService";
 
 const matches = [
 	{
@@ -40,22 +39,10 @@ const matches = [
 	},
 ];
 
-const mappedMatches: MappedMatch[] = [];
+const matchService = new MatchService();
 
-for (const rawMatch of matches) {
-	const validation = MatchSchema.safeParse(rawMatch);
-	if (!validation.success) {
-		continue;
-	}
-
-	const match = validation.data;
-
-	const parser = MatchParsers[match.sport];
-
-	mappedMatches.push({
-		name: parser.formatName(match),
-		score: parser.formatScore(match),
-	});
-}
+const mappedMatches = matchService.parseMatches(
+	matchService.validateMatches(matches),
+);
 
 console.log(mappedMatches);
